@@ -1,0 +1,116 @@
+.container {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #999;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.input {
+  /*animation-duration: .5s;
+  animation-timing-function: ease-out;
+  animation-name: slideLeft;
+  //animation-iteration-count: infinite;*/
+  
+  clear: both;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input.agent {
+  animation-name: slideLeft;
+  -webkit-transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition:         all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  left: 0;
+}
+.input.agent:hover {
+  left: 110%;
+}
+
+.input.user {
+  animation-name: slideUp;
+}
+
+.input.user .avatar {
+  float: right;
+  position: relative;
+}
+
+.input.user .input-text {
+  margin-left: 0;
+  margin-right: 50px;
+  text-align: right;
+  //animation-name: slideUp;
+}
+
+.input.user .avatar {
+  //animation-name: slideUpAvatar;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: #ccc;
+  float: left;
+  position: relative;
+  //animation-name: slideLeftAvatar;
+  //animation-duration: .2s;
+  //animation-delay: .25s;
+}
+
+.input-text {
+  margin-left: 50px;
+  background: #efefef;
+  padding: 10px;
+}
+
+@keyframes slideLeft {
+  0% {
+    left: 100%;
+  }
+  50% {
+    left: -15px;
+  }
+  75% {
+    left: 5px;
+  }
+  100% {
+    left 0;
+  }
+}
+
+@keyframes slideLeftAvatar {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: -10px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    top: 200px;
+  }
+  50% {
+    top: -15px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes slideUpAvatar {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -5px;
+  }
+  100% {
+    top: 0;
+  }
+}
